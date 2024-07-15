@@ -1,0 +1,33 @@
+@import "/src/app/styles/mixins.scss";
+
+.button {
+  text-transform: uppercase;
+  padding: 15px 24px;
+  background-color: transparent;
+  border-radius: 100px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 27px;
+  cursor: pointer;
+  transition: 0.3s ease;
+
+  &--white {
+    border: 3px solid white;
+    color: white;
+
+    &:hover {
+      background-color: white;
+      color: #b2e025;
+    }
+  }
+
+  &:not(.button--white) {
+    color: #92bd0e;
+    border: 3px solid #92bd0e;
+
+    &:hover {
+      background-color: #92bd0e;
+      color: white;
+    }
+  }
+}

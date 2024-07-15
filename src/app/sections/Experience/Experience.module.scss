@@ -1,0 +1,19 @@
+.experience {
+  padding: 100px 0;
+  background: linear-gradient(
+    183.76deg,
+    #b2e025 55.7%,
+    rgba(178, 224, 37, 0.01) 102.69%
+  );
+
+  &__image {
+    width: 100%;
+    height: 937px;
+
+    img {
+      width: 100%;
+      object-fit: cover;
+      height: 100%;
+    }
+  }
+}

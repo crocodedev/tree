@@ -1,0 +1,80 @@
+@import "/src/app/styles/mixins.scss";
+
+.hero {
+  overflow: hidden;
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    gap: 75px;
+    padding-top: 230px;
+    padding-bottom: 100px;
+  }
+
+  &__text-green {
+    width: max-content;
+    font-size: 168px;
+    font-weight: 900;
+    line-height: 201.6px;
+    background: linear-gradient(
+      203.67deg,
+      #b2e025 41.44%,
+      rgba(178, 224, 37, 0.01) 94.61%
+    );
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  &__text-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: max-content;
+  }
+
+  &__text-black {
+    font-size: 96px;
+    font-weight: 900;
+    line-height: 115.2px;
+    color: #212121;
+  }
+
+  &__qualities {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 660px;
+  }
+
+  &__btns {
+    display: flex;
+    gap: 42px;
+  }
+
+  &__image-wrapper {
+    position: relative;
+    width: max-content;
+  }
+
+  &__image {
+    &:not(.hero__image--secondary) {
+      width: 664px;
+      height: 829px;
+      position: relative;
+      z-index: 2;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
+    &--secondary {
+      top: -90px;
+      left: 320px;
+      z-index: 1;
+      position: absolute;
+      width: 661px;
+      height: 632px;
+    }
+  }
+}

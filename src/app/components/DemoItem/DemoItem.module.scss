@@ -1,0 +1,35 @@
+.demo-item {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  &__name {
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 43.2px;
+    text-align: center;
+  }
+
+  &__image {
+    width: 800px;
+    height: 800px;
+    border-radius: 45px;
+    overflow-y: scroll;
+    box-shadow: 8px 8px 8px 0px #00000040;
+
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: transparent;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}

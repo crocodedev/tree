@@ -1,0 +1,16 @@
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 70px;
+
+  a {
+    color: black;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 27px;
+    transition: 0.3s ease;
+  }
+  a:hover {
+    color: white;
+  }
+}
