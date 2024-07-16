@@ -14,7 +14,7 @@
     width: 800px;
     height: 800px;
     border-radius: 45px;
-    overflow-y: scroll;
+    overflow-y: hidden;
     box-shadow: 8px 8px 8px 0px #00000040;
 
     &::-webkit-scrollbar {

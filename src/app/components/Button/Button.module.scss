@@ -5,9 +5,8 @@
   padding: 15px 24px;
   background-color: transparent;
   border-radius: 100px;
-  font-size: 18px;
+
   font-weight: 700;
-  line-height: 27px;
   cursor: pointer;
   transition: 0.3s ease;
 
@@ -29,5 +28,16 @@
       background-color: #92bd0e;
       color: white;
     }
+  }
+
+  &:not(&--xl) {
+    font-size: 18px;
+    line-height: 27px;
+  }
+
+  &:is(&--xl) {
+    font-size: 40px;
+    line-height: 60px;
+    width: 520px;
   }
 }
