@@ -32,7 +32,6 @@
 
   &__image {
     width: 100%;
-    border-radius: 45px;
     overflow-y: hidden;
     box-shadow: 8px 8px 8px 0px #00000040;
 
@@ -53,6 +52,14 @@
 
     @include media-breakpoint-down(l) {
       height: 380px;
+    }
+
+    @include media-breakpoint-down(lg) {
+      border-radius: 30px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      border-radius: 45px;
     }
 
     @include media-breakpoint-between(l, xl) {
