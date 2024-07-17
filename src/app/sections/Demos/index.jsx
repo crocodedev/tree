@@ -11,7 +11,7 @@ const Demos = ({ demoInfo, title }) => {
           <SectionTitle>{title}</SectionTitle>
           <div className={style["demos__items"]}>
             {demoInfo.map((i) => (
-              <DemoItem name={i.name} image={i.image} />
+              <DemoItem name={i.name} image={i.image} key={i.name} />
             ))}
           </div>
         </div>

@@ -1,10 +1,4 @@
-import Header from "./sections/Header";
-import Hero from "./sections/Hero";
-import Demos from "./sections/Demos";
 import Experience from "./sections/Experience";
-import OtherPages from "./sections/OtherPages";
-import Footer from "./sections/Footer";
-import Benefits from "./sections/Benefits";
 
 export default function Home() {
   const homeDemos = [
@@ -66,17 +60,17 @@ export default function Home() {
 
   return (
     <>
-      <Header />
-      <Hero />
-      <Demos demoInfo={homeDemos} title={"Home Demos"} />
-      <Experience title={"Best User Experience On All Devices"} />
-      <Demos demoInfo={catalogPages} title={"Catalog Pages"} />
-      <Demos demoInfo={productPages} title={"Product Pages"} />
+      {/* <Header /> */}
+      {/* <Hero /> */}
+      {/* <Demos demoInfo={homeDemos} title={"Home Demos"} /> */}
+      {/* <Experience title={"Best User Experience On All Devices"} /> */}
+      {/* <Demos demoInfo={catalogPages} title={"Catalog Pages"} /> */}
+      {/* <Demos demoInfo={productPages} title={"Product Pages"} /> */}
       <Experience title={"Flexibility for customize"} variation="v2" />
-      <OtherPages />
-      <Experience title={"Mobile Version"} variation="v3" />
-      <Benefits />
-      <Footer />
+      {/* <OtherPages /> */}
+      {/* <Experience title={"Mobile Version"} variation="v3" /> */}
+      {/* <Benefits /> */}
+      {/* <Footer /> */}
     </>
   );
 }

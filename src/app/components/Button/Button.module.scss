@@ -2,10 +2,8 @@
 
 .button {
   text-transform: uppercase;
-  padding: 15px 24px;
   background-color: transparent;
   border-radius: 100px;
-
   font-weight: 700;
   cursor: pointer;
   transition: 0.3s ease;
@@ -31,13 +29,39 @@
   }
 
   &:not(&--xl) {
-    font-size: 18px;
-    line-height: 27px;
+    @include media-breakpoint-down(md) {
+      font-size: 14px;
+      line-height: 21px;
+      padding: 10px 20px;
+    }
+
+    @include media-breakpoint-up(md) {
+      font-size: 18px;
+      line-height: 27px;
+      padding: 15px 30px;
+    }
   }
 
   &:is(&--xl) {
-    font-size: 40px;
-    line-height: 60px;
-    width: 520px;
+    @include media-breakpoint-down(md) {
+      font-size: 14px;
+      line-height: 21px;
+      padding: 10px 20px;
+      width: 180px;
+    }
+
+    @include media-breakpoint-between(md, xl) {
+      font-size: 20px;
+      line-height: 40px;
+      padding: 10px 20px;
+
+      width: 320px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      font-size: 40px;
+      line-height: 60px;
+      width: 520px;
+    }
   }
 }

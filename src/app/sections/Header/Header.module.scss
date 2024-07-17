@@ -1,3 +1,5 @@
+@import "/src/app/styles/mixins.scss";
+
 .header {
   position: fixed;
   top: 0;
@@ -9,6 +11,18 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 37px 0;
+    @include media-breakpoint-down(l) {
+      padding: 15px 0;
+    }
+
+    @include media-breakpoint-up(l) {
+      padding: 37px 0;
+    }
+  }
+
+  &__buy {
+    @include media-breakpoint-down(l) {
+      display: none;
+    }
   }
 }

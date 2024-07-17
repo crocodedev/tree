@@ -15,9 +15,10 @@ const Header = () => {
         <div className={style["header__wrapper"]}>
           <h1 style={{ color: "black" }}>TREE</h1>
           <HeaderNav />
-          <div className={style["header__test"]}></div>
 
-          <Button handleClick={testFc} text={"BUY THEME"} color={"white"} />
+          <div className={style["header__buy"]}>
+            <Button handleClick={testFc} text={"BUY THEME"} color={"white"} />
+          </div>
         </div>
       </Container>
     </header>

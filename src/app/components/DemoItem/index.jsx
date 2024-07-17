@@ -11,10 +11,13 @@ const DemoItem = ({ name, image }) => {
 
     const handleMouseOver = () => {
       img.style.transition = `all ${
-        (3 * img.getBoundingClientRect().height - 800) / 1000
+        (3 * img.getBoundingClientRect().height -
+          imageRef.current.getBoundingClientRect().height) /
+        1000
       }s linear`;
       img.style.transform = `translate3d(0, -${
-        img.getBoundingClientRect().height - 800
+        img.getBoundingClientRect().height -
+        imageRef.current.getBoundingClientRect().height
       }px, 0)`;
     };
 

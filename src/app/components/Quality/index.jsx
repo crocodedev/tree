@@ -5,8 +5,8 @@ const Quality = ({ text, color }) => {
     <div className={style["quality__item"]}>
       <div className={style["quality__icon"]}>
         <svg
-          width="52"
-          height="57"
+          width="100%"
+          height="100%"
           viewBox="0 0 52 57"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
