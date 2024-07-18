@@ -68,10 +68,10 @@ export default function Home() {
     <>
       <Header />
       <Hero />
-      <Demos demoInfo={homeDemos} title={"Home Demos"} />
+      <Demos demoInfo={homeDemos} title={"Home Demos"} id={"demos"} />
       <Experience title={"Best User Experience On All Devices"} />
-      <Demos demoInfo={catalogPages} title={"Catalog Pages"} />
-      <Demos demoInfo={productPages} title={"Product Pages"} />
+      <Demos demoInfo={catalogPages} title={"Catalog Pages"} id={"catalog"} />
+      <Demos demoInfo={productPages} title={"Product Pages"} id={"products"} />
       <Experience title={"Flexibility for customize"} variation="v2" />
       <OtherPages />
       <Experience title={"Mobile Version"} variation="v3" />

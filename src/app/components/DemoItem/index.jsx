@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import style from "./DemoItem.module.scss";
+import Image from "next/image";
 
 const DemoItem = ({ name, image }) => {
   const imageRef = useRef();
@@ -39,8 +40,16 @@ const DemoItem = ({ name, image }) => {
   return (
     <div className={style["demo-item"]}>
       <div className={style["demo-item__image"]} ref={imageRef}>
-        <img src={image} alt={name} />
+        <Image
+          src={image}
+          width={800}
+          height={800}
+          alt={name}
+          loading="lazy"
+          quality={75}
+        />
       </div>
+
       <p className={style["demo-item__name"]}>{name}</p>
     </div>
   );

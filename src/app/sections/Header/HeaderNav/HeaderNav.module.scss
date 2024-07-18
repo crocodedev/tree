@@ -5,16 +5,24 @@
   align-items: center;
 
   @include media-breakpoint-down(l) {
-    display: none;
-    position: absolute;
+    &:not(.header-nav--active) {
+      left: -100%;
+    }
+
+    &:is(.header-nav--active) {
+      left: 0;
+    }
+
+    position: fixed;
+    z-index: 2;
     flex-direction: column;
     background-color: #b2e025;
-    right: 0;
     top: 0;
     box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.288);
     padding: 40px;
     height: 100vh;
     gap: 20px;
+    transition: 0.3s ease-in-out;
   }
 
   @include media-breakpoint-between(l, xl) {
@@ -46,5 +54,11 @@
   }
   a:hover {
     color: white;
+  }
+
+  &__btn {
+    @include media-breakpoint-up(l) {
+      display: none;
+    }
   }
 }

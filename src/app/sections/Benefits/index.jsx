@@ -1,6 +1,9 @@
+"use client";
+
 import Container from "@/app/components/Container";
 import style from "./Benefits.module.scss";
 import SectionTitle from "@/app/components/SectionTitle";
+import { motion } from "framer-motion";
 
 const Benefits = () => {
   return (
@@ -8,7 +11,17 @@ const Benefits = () => {
       <Container>
         <div className={style["benefits__wrapper"]}>
           <div className={style["benefits__top"]}>
-            <div className={style["benefits__item"]}>
+            <motion.div
+              className={style["benefits__item"]}
+              transition={{ duration: 0.5 }}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={{
+                visible: { scale: 1, opacity: 1 },
+                hidden: { scale: 0, opacity: 0 },
+              }}
+            >
               <div className={style["benefits__item-icon"]}>
                 <img src="/icons/benefits/seo.svg" alt="" />
               </div>
@@ -18,8 +31,18 @@ const Benefits = () => {
                   Unlock unparalleled speed with our SEO-optimized theme design.
                 </p>
               </div>
-            </div>
-            <div className={style["benefits__item"]}>
+            </motion.div>
+            <motion.div
+              className={style["benefits__item"]}
+              transition={{ duration: 0.5 }}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={{
+                visible: { scale: 1, opacity: 1 },
+                hidden: { scale: 0, opacity: 0 },
+              }}
+            >
               <div className={style["benefits__item-icon"]}>
                 <img src="/icons/benefits/mobile.svg" alt="" />
               </div>
@@ -30,10 +53,20 @@ const Benefits = () => {
                   in speed.
                 </p>
               </div>
-            </div>
+            </motion.div>
           </div>
           <div className={style["benefits__center"]}>
-            <div className={style["benefits__item"]}>
+            <motion.div
+              className={style["benefits__item"]}
+              transition={{ duration: 0.5 }}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={{
+                visible: { scale: 1, opacity: 1 },
+                hidden: { scale: 0, opacity: 0 },
+              }}
+            >
               <div className={style["benefits__item-icon"]}>
                 <img src="/icons/benefits/product.svg" alt="" />
               </div>
@@ -44,9 +77,29 @@ const Benefits = () => {
                   performance design.
                 </p>
               </div>
-            </div>
-            <SectionTitle>Benefits</SectionTitle>
-            <div className={style["benefits__item"]}>
+            </motion.div>
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={{
+                visible: { opacity: 1 },
+                hidden: { opacity: 0 },
+              }}
+            >
+              <SectionTitle>Benefits</SectionTitle>
+            </motion.div>
+            <motion.div
+              className={style["benefits__item"]}
+              transition={{ duration: 0.5 }}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={{
+                visible: { scale: 1, opacity: 1 },
+                hidden: { scale: 0, opacity: 0 },
+              }}
+            >
               <div className={style["benefits__item-icon"]}>
                 <img src="/icons/benefits/diamond.svg" alt="" />
               </div>
@@ -57,10 +110,20 @@ const Benefits = () => {
                   with design.
                 </p>
               </div>
-            </div>
+            </motion.div>
           </div>
           <div className={style["benefits__bottom"]}>
-            <div className={style["benefits__item"]}>
+            <motion.div
+              className={style["benefits__item"]}
+              transition={{ duration: 0.5 }}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={{
+                visible: { scale: 1, opacity: 1 },
+                hidden: { scale: 0, opacity: 0 },
+              }}
+            >
               <div className={style["benefits__item-icon"]}>
                 <img src="/icons/benefits/settings.svg" alt="" />
               </div>
@@ -71,8 +134,18 @@ const Benefits = () => {
                   navigation.
                 </p>
               </div>
-            </div>
-            <div className={style["benefits__item"]}>
+            </motion.div>
+            <motion.div
+              className={style["benefits__item"]}
+              transition={{ duration: 0.5 }}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={{
+                visible: { scale: 1, opacity: 1 },
+                hidden: { scale: 0, opacity: 0 },
+              }}
+            >
               <div className={style["benefits__item-icon"]}>
                 <img src="/icons/benefits/code.svg" alt="" />
               </div>
@@ -83,7 +156,7 @@ const Benefits = () => {
                   theme.
                 </p>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </Container>

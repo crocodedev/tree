@@ -1,27 +1,40 @@
 "use client";
 
-import Container from "@/app/components/Container";
 import style from "./Header.module.scss";
 import Button from "@/app/components/Button";
 import HeaderNav from "./HeaderNav";
+import { motion } from "framer-motion";
+import { useState } from "react";
 
 const Header = () => {
-  const testFc = () => {
-    alert("ХУЙ");
+  const [active, setActive] = useState(false);
+  const toggleMenu = () => {
+    setActive((prev) => !prev);
   };
-  return (
-    <header className={style["header"]}>
-      <Container>
-        <div className={style["header__wrapper"]}>
-          <h1 style={{ color: "black" }}>TREE</h1>
-          <HeaderNav />
 
-          <div className={style["header__buy"]}>
-            <Button handleClick={testFc} text={"BUY THEME"} color={"white"} />
-          </div>
+  return (
+    <motion.header
+      initial={{ opacity: 0, y: "-100%" }}
+      animate={{ opacity: 1, y: ["-100%", "5%", "0%"] }}
+      transition={{ duration: 0.5, ease: "easeInOut" }}
+      className={style["header"]}
+    >
+      <div className={style["header__wrapper"]}>
+        <a
+          href="#"
+          className={style["header__logo"]}
+          style={{ color: "black" }}
+        >
+          TREE
+        </a>
+        <div className={style["header__menu-btn"]} onClick={toggleMenu}></div>
+        <HeaderNav active={active} />
+
+        <div className={style["header__buy"]}>
+          <Button text={"BUY THEME"} color={"white"} />
         </div>
-      </Container>
-    </header>
+      </div>
+    </motion.header>
   );
 };
 

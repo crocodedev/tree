@@ -1,6 +1,7 @@
 @import "/src/app/styles/mixins.scss";
 
 .experience {
+  overflow: hidden;
   @include media-breakpoint-down(lg) {
     padding: 25px 0;
   }

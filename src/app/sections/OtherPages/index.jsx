@@ -1,12 +1,25 @@
+"use client";
+
 import Container from "@/app/components/Container";
 import style from "./OtherPages.module.scss";
 import SectionTitle from "@/app/components/SectionTitle";
+import { motion } from "framer-motion";
 
 const OtherPages = () => {
   return (
-    <section className={style["other-pages"]}>
+    <section className={style["other-pages"]} id="other">
       <Container>
-        <div className={style["other-pages__wrapper"]}>
+        <motion.div
+          className={style["other-pages__wrapper"]}
+          transition={{ duration: 1 }}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={{
+            visible: { opacity: 1 },
+            hidden: { opacity: 0 },
+          }}
+        >
           <SectionTitle>Other Pages</SectionTitle>
           <div className={style["other-pages__items"]}>
             <div className={style["other-pages__left"]}>
@@ -35,7 +48,7 @@ const OtherPages = () => {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </Container>
     </section>
   );

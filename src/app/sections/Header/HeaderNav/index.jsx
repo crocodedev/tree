@@ -1,15 +1,26 @@
 import Link from "next/link";
 import style from "./HeaderNav.module.scss";
+import Button from "@/app/components/Button";
 
-const HeaderNav = () => {
+const HeaderNav = ({ active }) => {
   return (
-    <nav className={style["header-nav"]}>
-      <Link href="#">Demos</Link>
-      <Link href="#">Catalog Pages</Link>
-      <Link href="#">Product Pages</Link>
-      <Link href="#">Other Pages</Link>
-      <Link href="#">Get Support</Link>
-      <Link href="#">Online Documentation</Link>
+    <nav
+      className={
+        active
+          ? `${style["header-nav"]} ${style["header-nav--active"]}`
+          : `${style["header-nav"]}`
+      }
+      id="menu"
+    >
+      <a href="#demos">Demos</a>
+      <a href="#catalog">Catalog Pages</a>
+      <a href="#products">Product Pages</a>
+      <a href="#other">Other Pages</a>
+      <a href="#">Get Support</a>
+      <a href="#">Online Documentation</a>
+      <div className={style["header-nav__btn"]}>
+        <Button text={"BUY THEME"} color={"white"} />
+      </div>
     </nav>
   );
 };
