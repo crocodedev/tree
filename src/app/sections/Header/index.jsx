@@ -25,7 +25,9 @@ const Header = () => {
           className={style["header__logo"]}
           style={{ color: "black" }}
         >
-          TREE
+          <div className={style["header__logo-icon"]}>
+            <img src="/icons/logo.svg" alt="logo" />
+          </div>
         </a>
         <div className={style["header__menu-btn"]} onClick={toggleMenu}></div>
         <HeaderNav active={active} />
