@@ -4,13 +4,24 @@ import style from "./Header.module.scss";
 import Button from "@/app/components/Button";
 import HeaderNav from "./HeaderNav";
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Header = () => {
   const [active, setActive] = useState(false);
+
+  const body = document.querySelector("body");
+
   const toggleMenu = () => {
     setActive((prev) => !prev);
   };
+
+  useEffect(() => {
+    if (active) {
+      body.style.overflow = "hidden";
+    } else {
+      body.style.overflow = "auto";
+    }
+  }, [active]);
 
   return (
     <motion.header
@@ -29,7 +40,14 @@ const Header = () => {
             <img src="/icons/logo.svg" alt="logo" />
           </div>
         </a>
-        <div className={style["header__menu-btn"]} onClick={toggleMenu}></div>
+        <div
+          className={
+            active
+              ? `${style["header__menu-btn"]} ${style["header__menu-btn--active"]}`
+              : `${style["header__menu-btn"]}`
+          }
+          onClick={toggleMenu}
+        ></div>
         <HeaderNav active={active} />
 
         <div className={style["header__buy"]}>
