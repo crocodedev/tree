@@ -16,10 +16,12 @@ const Header = () => {
   };
 
   useEffect(() => {
-    if (active) {
-      body.style.overflow = "hidden";
-    } else {
-      body.style.overflow = "auto";
+    if (typeof document !== "undefined") {
+      if (active) {
+        body.style.overflow = "hidden";
+      } else {
+        body.style.overflow = "auto";
+      }
     }
   }, [active]);
 
