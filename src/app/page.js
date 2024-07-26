@@ -11,18 +11,22 @@ export default function Home() {
     {
       name: "PITAYA",
       image: "/images/demo1.png",
+      url: "https://theme-cro-tree-pitaya.myshopify.com/?_ab=0&_fd=0&_sc=1",
     },
     {
       name: "ACACIA",
       image: "/images/demo2.png",
+      url: "https://theme-cro-tree-acacia.myshopify.com/",
     },
     {
       name: "PLUM",
       image: "/images/demo3.png",
+      url: "https://theme-cro-tree-plum.myshopify.com/",
     },
     {
       name: "BONSAI",
       image: "/images/demo4.png",
+      url: "https://theme-cro-tree-bonsai.myshopify.com/",
     },
   ];
 
@@ -30,18 +34,22 @@ export default function Home() {
     {
       name: "PITAYA",
       image: "/images/catalog/demo1.png",
+      url: "https://theme-cro-tree-pitaya.myshopify.com/collections/face",
     },
     {
       name: "ACACIA",
       image: "/images/catalog/demo2.png",
+      url: "https://theme-cro-tree-acacia.myshopify.com/collections/for-her",
     },
     {
       name: "PLUM",
       image: "/images/catalog/demo3.png",
+      url: "https://theme-cro-tree-plum.myshopify.com/collections/female-bags",
     },
     {
       name: "BONSAI",
       image: "/images/catalog/demo4.png",
+      url: "https://theme-cro-tree-bonsai.myshopify.com/collections/womens",
     },
   ];
 
@@ -49,18 +57,22 @@ export default function Home() {
     {
       name: "PITAYA",
       image: "/images/product/demo1.png",
+      url: "https://theme-cro-tree-pitaya.myshopify.com/products/amazing-aluminum-shoes-collection6?variant=44186420805905",
     },
     {
       name: "ACACIA",
       image: "/images/product/demo2.png",
+      url: "https://theme-cro-tree-acacia.myshopify.com/products/amazing-aluminum-snowman-collection7?variant=44169403334959",
     },
     {
       name: "PLUM",
       image: "/images/product/demo3.png",
+      url: "https://theme-cro-tree-plum.myshopify.com/products/amazing-aluminum-spoon-collection15?variant=44143972876607",
     },
     {
       name: "BONSAI",
       image: "/images/product/demo4.png",
+      url: "https://theme-cro-tree-bonsai.myshopify.com/products/amazing-aluminum-shirt-collection13?variant=44193272627496",
     },
   ];
 
